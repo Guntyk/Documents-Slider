@@ -1,19 +1,41 @@
+import { useHistory, useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Pagination } from "swiper";
-import { useHistory, useParams } from "react-router-dom";
+import { useState } from "react";
 import { cards } from "../data";
 import Card from "./Card/Card";
 import "./DocumentsSlider.css";
 
 export default function DocumentsSlider() {
+  const [activeSlideIdx, setActiveSlideIdx] = useState({});
   const { documentsType } = useParams();
   const { goBack } = useHistory();
+  const cardsType = cards.filter(
+    (card) => card.attributes.type.slice(-1) === documentsType
+  );
 
   return (
     <>
       <button className="back-btn" onClick={goBack}>
         <BackArrow />
       </button>
+      {cards
+        .filter((card) => card.attributes.type.slice(-1) === documentsType)
+        .map((card) => (
+          <div
+            className={`overlay ${
+              cardsType.indexOf(card) === activeSlideIdx ? "active" : ""
+            }`}
+          >
+            <div className="info-wrapper">
+              <h1 className="card-name">{card.attributes.name}</h1>
+              <p className="card-descr">{card.attributes.description}</p>
+              <div className="card-btn-wrapper">
+                <button className="card-btn">Open</button>
+              </div>
+            </div>
+          </div>
+        ))}
       <Swiper
         modules={[Mousewheel, Pagination]}
         speed={800}
@@ -24,6 +46,12 @@ export default function DocumentsSlider() {
         mousewheel={true}
         pagination={{
           clickable: true,
+        }}
+        onSwiper={(e) => {
+          setActiveSlideIdx(e.activeIndex);
+        }}
+        onSlideChange={(e) => {
+          setActiveSlideIdx(e.activeIndex);
         }}
         className="slider"
       >

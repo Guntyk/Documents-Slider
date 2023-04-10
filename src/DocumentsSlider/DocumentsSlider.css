@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   height: 100vh;
+  font-size: 1rem;
 }
 
 .swiper-wrapper {
@@ -18,3 +19,24 @@
   left: 3%;
   z-index: 50;
 }
+
+@media (max-width: 1150px) {
+  .slider {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 870px) {
+  .slider {
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 550px) {
+  .slider {
+    font-size: 0.4rem;
+  }
+}
+/* @media (max-width: 1150px) {
+  .slider {
+    font-size: ;
+  }
+} */
