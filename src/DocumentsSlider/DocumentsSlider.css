@@ -1,0 +1,20 @@
+.slider {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.tilt {
+  perspective: 1000px;
+}
+
+.back-btn {
+  position: fixed;
+  top: 3%;
+  left: 3%;
+  z-index: 50;
+}
