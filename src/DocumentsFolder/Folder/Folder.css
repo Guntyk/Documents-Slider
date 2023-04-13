@@ -138,3 +138,63 @@
   transform: translateY(-95%) translateX(3.125em) rotateY(-27.5deg)
     rotateZ(10deg);
 }
+
+@media (max-width: 900px) {
+  .folder:hover {
+    transform: translateX(0);
+  }
+
+  .folder:hover ~ .type-name {
+    letter-spacing: 1px;
+  }
+
+  .folder:hover ~ .type-name::before {
+    transform: scaleX(0);
+  }
+
+  .folder:hover::before {
+    transform: rotateY(-40deg);
+  }
+
+  .folder:hover::after {
+    transform: rotateY(-40deg) translateX(-50%) translateZ(1px);
+  }
+
+  .folder:hover .paper {
+    transform: translateY(5%) translateX(0) rotateY(-10deg) rotateZ(0);
+  }
+
+  .folder:hover .paper:nth-child(2) {
+    transform: translateY(-95%) translateX(0) rotateY(-27.5deg) rotateZ(0);
+  }
+
+  .folder.active {
+    transform: translateX(-0.625em);
+  }
+
+  .folder.active ~ .type-name {
+    letter-spacing: 0.3125em;
+  }
+
+  .folder.active ~ .type-name::before {
+    transform: scaleX(100%);
+  }
+
+  .folder.active::before {
+    transform: rotateY(-70deg);
+  }
+
+  .folder.active::after {
+    transform: rotateY(-70deg) translateX(-50%) translateZ(1px);
+  }
+
+  .folder.active .paper {
+    transform: translateY(5%) translateX(3.125em) rotateY(-10deg)
+      rotateZ(-10deg);
+  }
+
+  .folder.active .paper:nth-child(2) {
+    transform: translateY(-95%) translateX(3.125em) rotateY(-27.5deg)
+      rotateZ(10deg);
+  }
+}

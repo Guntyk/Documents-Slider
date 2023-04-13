@@ -8,7 +8,9 @@ export default function Folder({ type }) {
       <div
         className="folder"
         onClick={() => {
-          push(`/documents/${type.slice(-1)}`);
+          setTimeout(() => {
+            push(`/documents/${type.slice(-1)}`);
+          }, 600);
         }}
       >
         <div className="paper">
