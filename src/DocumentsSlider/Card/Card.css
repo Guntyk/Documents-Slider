@@ -81,8 +81,8 @@
 }
 
 .info-wrapper {
-  margin-left: 3.125em;
-  width: 30%;
+  margin: 0 0 3.125em 4em;
+  width: 40%;
   height: 40%;
   z-index: 999999;
 }
@@ -103,6 +103,7 @@
 
 .card-descr {
   color: rgba(190, 190, 190, 1);
+  font-size: 1vw;
   transition-delay: 0;
 }
 
@@ -113,7 +114,7 @@
   color: #000;
   font-size: 1.3vw;
   font-family: sans-serif;
-  background-color: #fff;
+  background: #fff;
   border: 0.08em solid #fff;
   border-radius: 50px;
   pointer-events: all;
@@ -124,7 +125,7 @@
 
 .card-btn:hover {
   color: #fff;
-  background-color: transparent;
+  background: transparent;
 }
 
 .swiper-slide.swiper-slide-active {
