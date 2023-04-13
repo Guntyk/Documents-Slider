@@ -71,4 +71,31 @@ export const cards = [
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem consectetur accusantium hic ratione quisquam inventore dolorum, maxime itaque officiis iste optio eligendi adipisci quod aperiam voluptate? Nulla maiores adipisci officiis?",
     },
   },
+  {
+    id: 9,
+    attributes: {
+      name: "Card 9",
+      type: "Type 1",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem consectetur accusantium hic ratione quisquam inventore dolorum, maxime itaque officiis iste optio eligendi adipisci quod aperiam voluptate? Nulla maiores adipisci officiis?",
+    },
+  },
+  {
+    id: 10,
+    attributes: {
+      name: "Card 10",
+      type: "Type 1",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem consectetur accusantium hic ratione quisquam inventore dolorum, maxime itaque officiis iste optio eligendi adipisci quod aperiam voluptate? Nulla maiores adipisci officiis?",
+    },
+  },
+  {
+    id: 11,
+    attributes: {
+      name: "Card 11",
+      type: "Type 1",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem consectetur accusantium hic ratione quisquam inventore dolorum, maxime itaque officiis iste optio eligendi adipisci quod aperiam voluptate? Nulla maiores adipisci officiis?",
+    },
+  },
 ];

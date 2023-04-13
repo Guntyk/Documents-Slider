@@ -5,6 +5,7 @@ import { useState } from "react";
 import { cards } from "../data";
 import Card from "./Card/Card";
 import "./DocumentsSlider.css";
+import "swiper/css";
 
 export default function DocumentsSlider() {
   const [activeSlideIdx, setActiveSlideIdx] = useState({});
@@ -23,6 +24,7 @@ export default function DocumentsSlider() {
         .filter((card) => card.attributes.type.slice(-1) === documentsType)
         .map((card) => (
           <div
+            key={card.id}
             className={`overlay ${
               cardsType.indexOf(card) === activeSlideIdx ? "active" : ""
             }`}
@@ -41,7 +43,7 @@ export default function DocumentsSlider() {
         speed={800}
         draggable={false}
         centeredSlides={true}
-        spaceBetween={30}
+        spaceBetween={150}
         slidesPerView={4}
         mousewheel={true}
         pagination={{
@@ -59,7 +61,7 @@ export default function DocumentsSlider() {
           .filter((card) => card.attributes.type.slice(-1) === documentsType)
           .map((card) => (
             <SwiperSlide key={card.id}>
-              <Card card={card.attributes} />
+              <Card card={card} />
             </SwiperSlide>
           ))}
       </Swiper>

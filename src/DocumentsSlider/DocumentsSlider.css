@@ -1,12 +1,27 @@
 .slider {
-  display: flex;
+  height: 100vh;
+  /* display: flex;
   align-items: center;
   height: 100vh;
-  font-size: 1rem;
+  overflow: hidden;
+  font-size: 1rem; */
+  /* width: 100vw !important; */
 }
 
 .swiper-wrapper {
-  display: flex;
+  padding-left: 20vw;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* height: 100vh; */
+  /* border: 2px solid red; */
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: red;
+  border: 2px solid lime;
 }
 
 .tilt {
