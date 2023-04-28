@@ -16,10 +16,12 @@ export default function DocumentsFolder() {
   }, []);
 
   return (
-    <div className="folders">
-      {types.map((type) => (
-        <Folder type={type} key={type} />
-      ))}
+    <div className="folders-wrapper">
+      <div className="folders">
+        {types.map((type) => (
+          <Folder type={type} key={type} />
+        ))}
+      </div>
     </div>
   );
 }

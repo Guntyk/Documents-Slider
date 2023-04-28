@@ -21,7 +21,14 @@
   }
 }
 @media (max-width: 550px) {
+  .folders-wrapper {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+  }
   .folders {
+    height: 70vh;
     font-size: 0.6rem;
   }
 }

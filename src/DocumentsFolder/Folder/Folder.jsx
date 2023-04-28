@@ -16,8 +16,7 @@ export default function Folder({ type }) {
           <hr />
           <hr />
           <hr />
-          <hr />
-          <hr />
+          <span>Open</span>
           <hr />
           <hr />
           <hr />
@@ -28,8 +27,7 @@ export default function Folder({ type }) {
           <hr />
           <hr />
           <hr />
-          <hr />
-          <hr />
+          <span>Open</span>
           <hr />
           <hr />
           <hr />

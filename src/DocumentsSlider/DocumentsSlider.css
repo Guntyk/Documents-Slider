@@ -1,27 +1,15 @@
-.slider {
-  height: 100vh;
-  /* display: flex;
-  align-items: center;
+.slider-box {
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
-  font-size: 1rem; */
-  /* width: 100vw !important; */
+}
+
+.slider {
+  height: 100vh;
 }
 
 .swiper-wrapper {
   padding-left: 20vw;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* height: 100vh; */
-  /* border: 2px solid red; */
-}
-
-.box {
-  width: 100px;
-  height: 100px;
-  background: red;
-  border: 2px solid lime;
 }
 
 .tilt {
@@ -44,9 +32,15 @@
   .slider {
     font-size: 0.6rem;
   }
+  .swiper-wrapper {
+    padding-left: 10vw;
+  }
 }
 @media (max-width: 550px) {
   .slider {
     font-size: 0.4rem;
+  }
+  .swiper-wrapper {
+    padding-left: 0;
   }
 }

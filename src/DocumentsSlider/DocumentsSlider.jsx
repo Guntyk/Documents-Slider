@@ -16,7 +16,7 @@ export default function DocumentsSlider() {
   );
 
   return (
-    <>
+    <div className="slider-box">
       <button className="back-btn" onClick={goBack}>
         <BackArrow />
       </button>
@@ -39,23 +39,36 @@ export default function DocumentsSlider() {
           </div>
         ))}
       <Swiper
-        modules={[Mousewheel, Pagination]}
+        className="slider"
+        modules={[Mousewheel]}
         speed={800}
         draggable={false}
         centeredSlides={true}
-        spaceBetween={150}
-        slidesPerView={4}
+        slidesPerView={2}
         mousewheel={true}
-        pagination={{
-          clickable: true,
-        }}
         onSwiper={(e) => {
           setActiveSlideIdx(e.activeIndex);
         }}
         onSlideChange={(e) => {
           setActiveSlideIdx(e.activeIndex);
         }}
-        className="slider"
+        breakpoints={{
+          1600: {
+            slidesPerView: 4,
+          },
+          1150: {
+            slidesPerView: 3,
+            draggable: false,
+          },
+          840: {
+            slidesPerView: 2.5,
+            draggable: false,
+          },
+          550: {
+            slidesPerView: 2,
+            draggable: false,
+          },
+        }}
       >
         {cards
           .filter((card) => card.attributes.type.slice(-1) === documentsType)
@@ -65,7 +78,7 @@ export default function DocumentsSlider() {
             </SwiperSlide>
           ))}
       </Swiper>
-    </>
+    </div>
   );
 }
 
@@ -75,7 +88,6 @@ function BackArrow() {
       cursor="pointer"
       width="30px"
       height="30px"
-      fill="#fff"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
     >

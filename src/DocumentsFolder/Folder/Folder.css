@@ -22,7 +22,7 @@
   bottom: -0.2em;
   width: 100%;
   height: 1px;
-  background: #fff;
+  background: #000;
   transition: 0.5s;
   transform: scaleX(0);
 }
@@ -39,7 +39,6 @@
   width: 14em;
   height: 18.75em;
   background: linear-gradient(to right, rgb(211, 196, 130), rgb(255, 237, 156));
-  border: 1px solid rgba(150, 150, 150, 1);
   border-radius: 0.2em;
   transform-style: preserve-3d;
   transform: rotateY(0deg);
@@ -79,10 +78,12 @@
   padding: 1.25em;
   width: 95%;
   height: 90%;
+  color: #000;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background: #fff;
   border-radius: 0.15em;
   transform-origin: left;
+  text-align: center;
   box-sizing: border-box;
 }
 
@@ -99,6 +100,11 @@
   background: #6e6e6e;
   border: none;
   outline: none;
+}
+
+.paper span {
+  font-size: 1.3em;
+  letter-spacing: 1px;
 }
 
 @keyframes rotation {
